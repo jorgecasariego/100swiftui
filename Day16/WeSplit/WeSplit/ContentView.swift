@@ -10,11 +10,13 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var tapCount = 0
+    @State private var name = ""
     
     var body: some View {
         NavigationView {
             Form {
                 Section {
+                    TextField("Enter your name: ", text: $name)
                     Text("Hello, World!")
                     Text("Hello, World!")
                     Text("Hello, World!")
@@ -24,7 +26,7 @@ struct ContentView: View {
                 }
                 
                 Section {
-                    Text("Hello, World!")
+                    Text("Your name is \(name) ")
                     Text("Hello, World!")
                     Text("Hello, World!")
                     Text("Hello, World!")
